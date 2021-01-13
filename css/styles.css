@@ -48,6 +48,17 @@ body {
   margin: 0px;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   padding: 0 15px;
@@ -834,4 +845,49 @@ body {
 .modal-form-message:focus {
   outline: none;
   border-color: var(--accent-color-blue);
+}
+
+.modal-form-policy-text::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 1px solid #000;
+}
+
+.modal-form-policy:checked + .modal-form-policy-text::before {
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: var(--accent-color-blue);
+  border-radius: 2px;
+}
+
+.modal-form-policy-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: #757575;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.modal-form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.modal-form-field {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 10px;
 }
