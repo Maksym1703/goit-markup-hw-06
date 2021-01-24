@@ -849,10 +849,11 @@ body {
 
 .modal-form-policy-text::before {
   content: "";
-  display: block;
+  display: inline-block;
   width: 16px;
   height: 15px;
   border: 1px solid #000;
+  margin-right: 8px;
 }
 
 .modal-form-policy:checked + .modal-form-policy-text::before {
