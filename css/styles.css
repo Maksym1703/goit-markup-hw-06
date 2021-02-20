@@ -771,6 +771,10 @@ body {
   cursor: pointer;
 }
 
+.modal-icon:hover {
+  fill: var(--accent-color-blue);
+}
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
